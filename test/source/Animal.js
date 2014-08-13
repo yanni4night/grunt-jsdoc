@@ -61,10 +61,13 @@ Animal.prototype = {
 
 /**
  * See
+ * @since  1.0
+ * @throws {Error} If [this condition is met]
  */
 function see(){}
 
 /**
  * Live
+ * @since 1.1
  */
 var live = function(){};

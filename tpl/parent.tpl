@@ -65,6 +65,8 @@ code, tt {
 dt code {
     font-size:1.2em;
 }
+table{border-collapse: separate;}
+td{border: 1px solid #ccc;}
 table tr td dt code {
     font-size:1.2em;
     vertical-align:top;
