@@ -1,0 +1,33 @@
+/**
+ * Copyright (C) 2014 yanni4night.com
+ * Cat.js
+ *
+ * changelog
+ * 2014-08-13[13:17:28]:authorized
+ *
+ * @author yanni4night@gmail.com
+ * @version 0.1.0
+ * @since 0.1.0
+ */
+
+
+/**
+ * Cat animal
+ *
+ * @class
+ * @extends Animal
+ */
+var Cat = function() {
+
+}
+
+Cat.prototype = {
+  /**
+   * Cat jump
+   * @class Cat
+   * @method
+   */
+  jump: function() {
+
+  }
+};
