@@ -1,5 +1,7 @@
 {%extends "parent.tpl"%}
 
+{%block title%}{{name}}{%endblock%}
+
 {%block content%}
 <div class="header">
     <h2 title="Class {{name}}" class="title">Class {{name}}</h2>
@@ -41,7 +43,7 @@
                             <th class="colLast" scope="col">Constructor and Description</th>
                         </tr>
                         <tr class="altColor">
-                            <td class="colLast"><code><strong><a href="#">
+                            <td class="colLast"><code><strong><a href="#{{obj._def.func.name}}">
                                 {{obj._def.func.name}}
                             </a></strong>({{obj._def.func.params}})</code>
                         </td>

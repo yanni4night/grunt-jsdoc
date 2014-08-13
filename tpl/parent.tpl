@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>{%block title%}{%endblock%}</title>
+        <title>{%block title%}Doc{%endblock%}</title>
         <style type="text/css">
 /* Javadoc style sheet */
 /*
