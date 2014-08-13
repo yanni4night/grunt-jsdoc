@@ -8,7 +8,7 @@
 
 'use strict';
 
-var jsdoc = require('../../jsdoc/index'); //todo
+var jsdoc = require('yjsdoc'); //todo
 var swig = require('swig');
 var path = require('path');
 

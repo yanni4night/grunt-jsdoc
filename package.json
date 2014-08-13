@@ -38,9 +38,10 @@
     "grunt": "~0.4.4"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin","jsdoc"
   ],
   "dependencies": {
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "yjsdoc": "0.0.2"
   }
 }

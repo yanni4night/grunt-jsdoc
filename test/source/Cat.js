@@ -27,6 +27,9 @@ Cat.prototype = {
    * Cat jump
    * @class Cat
    * @method
+   * @since 0.0.2
+   * @return {Void}
+   * @throws {Error} If legs hurt
    */
   jump: function() {
 
