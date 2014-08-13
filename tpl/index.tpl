@@ -3,7 +3,7 @@
         <table width="100%" height="100%">
             <tbody>
                 <tr>
-                    <td width="15%">
+                    <td width="15%" valign='top'>
                         <ul>
                             {%for e in list%}
                             <li><a href="{{e}}.html" target="contentFrame">{{e}}</a></li>

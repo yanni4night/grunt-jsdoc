@@ -15,6 +15,7 @@
  * Cat animal
  *
  * @class
+ * @since  1.0
  * @extends Animal
  */
 var Cat = function() {

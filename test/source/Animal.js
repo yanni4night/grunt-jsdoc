@@ -15,6 +15,7 @@
  * Animal is the super class of all animals.
  *
  * @class
+ * @since 1.0
  */
 function Animal () {
 }
@@ -28,13 +29,33 @@ Animal.prototype = {
    */
   version:0,
   /**
+   * [num description]
+   * @type {Number}
+   * @class Animal
+   */
+  num:3.34e+5,
+  /**
    * Animal eat.
    *
    * @class  Animal
    * @param  {Object} food The foot to be eat.
+   * @return {Boolean}
+   * @throws {Error} If cannot eat
+   * @throws {IOError} If nothing to eat
    */
   eat:function(food){
 
+    return false;
+  },
+  /**
+   * The poop description.
+   *
+   * @class Animal
+   * @param  {String} where
+   * @return {Object}
+   */
+  poop:function(where){
+    return {};
   }
 };
 
