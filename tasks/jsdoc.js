@@ -24,6 +24,10 @@ module.exports = function(grunt) {
       destDir: '.'
     });
 
+    if (!require('fs').statSync(options.destDir).isDirectory()) {
+      throw new Error('destDir has to a directory');
+    }
+
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
       // Concat specified files.
