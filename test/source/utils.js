@@ -11,6 +11,13 @@
   */
 
 
+
+/**
+ * Utils description
+ *
+ * @since 0.2.1
+ * @class 
+ */
 var Utils = {
     /**
      * Get the inner html

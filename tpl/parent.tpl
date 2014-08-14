@@ -12,7 +12,7 @@ html,body {
     background-color:#ffffff;
     color:#353833;
     font-family:Arial, Helvetica, sans-serif;
-    font-size:76%;
+    font-size:15px;
     margin:0;
     height:100%;
 }

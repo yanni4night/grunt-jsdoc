@@ -31,6 +31,7 @@ Cat.prototype = {
    * @return {Void}
    * @throws {Error} If legs hurt
    * @throws {Error} If legs hurt
+   * @deprecated
    */
   jump: function() {
 
