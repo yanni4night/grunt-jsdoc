@@ -30,7 +30,9 @@ Animal.prototype = {
   version:0,
   /**
    * [num description]
+   * 
    * @type {Number}
+   * @since 1.0
    * @class Animal
    */
   num:3.34e+5,

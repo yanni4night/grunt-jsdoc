@@ -90,7 +90,9 @@ Document title and Copyright styles
     margin-top:-7px;
 }
 .legalCopy {
-    margin-left:.5em;
+    border-top: 1px solid #9eadc0;
+    text-align: center;
+    padding: 0.5em 0;
 }
 .bar a, .bar a:link, .bar a:visited, .bar a:active {
     color:#FFFFFF;

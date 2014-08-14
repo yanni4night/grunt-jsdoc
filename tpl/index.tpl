@@ -1,4 +1,9 @@
 {%extends "parent.tpl"%}
+
+{%block title%}
+{{title}}
+{%endblock%}
+
 {%block content%}
         <table width="100%" height="100%">
             <tbody>
