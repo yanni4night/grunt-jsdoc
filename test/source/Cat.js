@@ -30,6 +30,7 @@ Cat.prototype = {
    * @since 0.0.2
    * @return {Void}
    * @throws {Error} If legs hurt
+   * @throws {Error} If legs hurt
    */
   jump: function() {
 

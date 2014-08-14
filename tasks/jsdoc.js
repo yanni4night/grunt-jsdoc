@@ -8,6 +8,7 @@
 
 'use strict';
 
+//var jsdoc = require('../../jsdoc/index'); //todo
 var jsdoc = require('yjsdoc'); //todo
 var swig = require('swig');
 var path = require('path');
@@ -56,8 +57,11 @@ module.exports = function(grunt) {
         grunt.log.writeln('Doc "' + key + '.html" created.');
       }); //render classes complete
 
-      grunt.file.write(path.join(options.destDir, 'functions.html'), swig.renderFile(path.join(__dirname, '../', 'tpl/functions.tpl'), {
-        functions: docs.methods
+      grunt.file.write(path.join(options.destDir, 'functions.html'), swig.renderFile(path.join(__dirname, '../', 'tpl/class.tpl'), {
+        name:'functions',
+        obj:{
+          _methods:docs.methods
+        }
       }));
 
       grunt.file.write(path.join(options.destDir, 'index.html'), swig.renderFile(path.join(__dirname, '../', 'tpl/index.tpl'), {

@@ -1,7 +1,5 @@
 {%extends "parent.tpl"%}
-
 {%block title%}{{name}}{%endblock%}
-
 {%block content%}
 <div class="header">
     <h2 title="Class {{name}}" class="title">Class {{name}}</h2>
@@ -32,6 +30,7 @@
     <div class="summary">
         <ul class="blockList">
             <li class="blockList">
+                {%if obj._def%}
                 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
                 <ul class="blockList">
                     <li class="blockList"><a name="constructor_summary">
@@ -51,6 +50,8 @@
                 </tbody></table>
             </li>
         </ul>
+        {%endif%}
+
         <!-- ========== FIELDS SUMMARY =========== -->
         <ul class="blockList">
             <li class="blockList"><a name="method_summary">
@@ -103,22 +104,76 @@
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+
+{%if obj._def%}
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
+
 <li class="blockList">
+<a name="{{obj._def.func.name}}"></a>
 <h3>Constructor Detail</h3>
 <ul class="blockListLast">
     <li class="blockList">
         <h4>{{obj._def.func.name}}({{obj._def.func.params}})</h4>
+
         <div class="block">
             {%for e in obj._def.descs%}
             {{e}}
             {%endfor%}
         </div>
+        {%set e=obj._def%}
+        {%if e.tags.param.length>0%}
+<dl>
+    <dt>
+    <span class="strong">Params:</span>
+    </dt>
+    <dd>
+    {%for p in e.tags.param%}
+    <p>{{p}}</p>
+    {%endfor%}
+    </dd>
+</dl>
+{%endif%}
+
+{%if e.tags.return%}
+<dl>
+    <dt>
+    <span class="strong">Returns:</span>
+    </dt>
+    <dd>
+    {{e.tags.return}}
+    </dd>
+</dl>
+{%endif%}
+
+{%if e.tags.throws.length>0%}
+<dl>
+    <dt>
+    <span class="strong">Throws:</span>
+    </dt>
+    <dd>
+        {%for th in e.tags.throws%}
+            <p>{{th}}</p>
+        {%endfor%}
+    </dd>
+</dl>
+{%endif%}
+{%if e.tags.since%}
+<dl>
+    <dt>
+    <span class="strong">Since:</span>
+    </dt>
+    <dd>
+    {{e.tags.since}}
+    </dd>
+</dl>
+{%endif%}
     </li>
 </ul>
 </li>
+
 </ul>
+{%endif%}
 <!-- ============ FIELDS DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="fields_detail">
@@ -131,9 +186,7 @@
     <a name="{{e.attr.name}}"></a>
     <h4>{{e.attr.name}}</h4>
     <div class="block">
-        {%for d in e.descs%}
-        {{d}}
-        {%endfor%}
+{%for d in e.descs%}{{d}}{%endfor%}
     </div>
 </li>
 {%endfor%}
@@ -143,7 +196,6 @@
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
-<!--   -->
 </a>
 <h3>Method Detail</h3>
 <ul class="blockList">
@@ -152,10 +204,23 @@
 <a name="{{e.func.name}}"></a>
 <h4>{{e.func.name}}({{e.func.params}})</h4>
 <div class="block">
-    {%for d in e.descs%}
-    {{d}}
-    {%endfor%}
+{%for d in e.descs%}{{d}}{%endfor%}
 </div>
+
+{%if e.tags.param.length>0%}
+<dl>
+    <dt>
+    <span class="strong">Params:</span>
+    </dt>
+    <dd>
+    {%for p in e.tags.param%}
+    <p>{{p}}</p>
+    {%endfor%}
+    </dd>
+</dl>
+{%endif%}
+
+{%if e.tags.return%}
 <dl>
     <dt>
     <span class="strong">Returns:</span>
@@ -164,14 +229,21 @@
     {{e.tags.return}}
     </dd>
 </dl>
+{%endif%}
+
+{%if e.tags.throws.length>0%}
 <dl>
     <dt>
     <span class="strong">Throws:</span>
     </dt>
     <dd>
-    {{e.tags.throws}}
+        {%for th in e.tags.throws%}
+            <p>{{th}}</p>
+        {%endfor%}
     </dd>
 </dl>
+{%endif%}
+{%if e.tags.since%}
 <dl>
     <dt>
     <span class="strong">Since:</span>
@@ -180,6 +252,7 @@
     {{e.tags.since}}
     </dd>
 </dl>
+{%endif%}
 </li>
 {%endfor%}
 </ul>

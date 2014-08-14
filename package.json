@@ -1,7 +1,7 @@
 {
   "name": "grunt-yjsdoc",
   "description": "Grunt plugin for generating doc from javascript source files",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/yanni4night/grunt-jsdoc",
   "author": {
     "name": "yinyong",
@@ -42,6 +42,6 @@
   ],
   "dependencies": {
     "swig": "^1.4.2",
-    "yjsdoc": "0.0.2"
+    "yjsdoc": "0.0.3"
   }
 }

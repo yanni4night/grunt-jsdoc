@@ -62,12 +62,15 @@ Animal.prototype = {
 /**
  * See
  * @since  1.0
+ * @param {Integer} far The distance
+ * @return {String}
  * @throws {Error} If [this condition is met]
  */
-function see(){}
+function see(far){}
 
 /**
  * Live
  * @since 1.1
+ * @return {Integer}
  */
 var live = function(){};
