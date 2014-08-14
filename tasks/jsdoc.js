@@ -9,7 +9,7 @@
 'use strict';
 
 //var jsdoc = require('../../jsdoc/index'); //todo
-var jsdoc = require('yjsdoc'); //todo
+var jsdoc = require('yjsdoc');
 var swig = require('swig');
 var path = require('path');
 
@@ -44,12 +44,19 @@ module.exports = function(grunt) {
         }
       }).map(function(filepath, idx) {
         return grunt.file.read(filepath);
-
-
       });
 
 
       var docs = jsdoc(contents);
+      var functionsKey = 'functions';
+      
+      if (docs.classes[functionsKey]) {
+        functionsKey += (Math.random() * 1e6) | 0;
+      }
+
+      docs.classes[functionsKey] = {
+        _methods: docs.methods
+      };
 
       var keys = Object.keys(docs.classes);
 
@@ -61,18 +68,11 @@ module.exports = function(grunt) {
         grunt.log.writeln('Doc "' + key + '.html" created.');
       }); //render classes complete
 
-      grunt.file.write(path.join(options.destDir, 'functions.html'), swig.renderFile(path.join(__dirname, '../', 'tpl/class.tpl'), {
-        name:'functions',
-        obj:{
-          _methods:docs.methods
-        }
-      }));
 
       grunt.file.write(path.join(options.destDir, 'index.html'), swig.renderFile(path.join(__dirname, '../', 'tpl/index.tpl'), {
-        list: keys.concat('functions')
+        list: keys
       }));
 
     }); //files foreach
   });
-
 };

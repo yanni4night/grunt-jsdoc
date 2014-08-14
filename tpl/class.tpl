@@ -5,13 +5,15 @@
     <h2 title="Class {{name}}" class="title">Class {{name}}</h2>
 </div>
 <div class="contentContainer">
+    {%if obj._def.zuper%}
     <ul class="inheritance">
         <li>
             <ul class="inheritance">
-                <li>{{obj.zuper}}</li>
+                <li>extends:{{obj._def.zuper}}</li>
             </ul>
         </li>
     </ul>
+    {%endif%}
     <div class="description">
         <ul class="blockList">
             <li class="blockList">
@@ -20,10 +22,12 @@
                     <p>{{m}}</p>
                     {%endfor%}
                 </div>
+                {%if obj._def.tags.since%}
                 <dl>
                     <dt><span class="strong">Since:</span></dt>
                     <dd>{{obj._def.tags.since}}</dd>
                 </dl>
+                {%endif%}
             </li>
         </ul>
     </div>
