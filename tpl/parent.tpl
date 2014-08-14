@@ -99,65 +99,7 @@ Document title and Copyright styles
 .bar a:hover, .bar a:focus {
     color:#bb7a2a;
 }
-.tab {
-    background-color:#0066FF;
-    background-image:url(resources/titlebar.gif);
-    background-position:left top;
-    background-repeat:no-repeat;
-    color:#ffffff;
-    padding:8px;
-    width:5em;
-    font-weight:bold;
-}
-/*
-Navigation bar styles
-*/
-.bar {
-    background-image:url(resources/background.gif);
-    background-repeat:repeat-x;
-    color:#FFFFFF;
-    padding:.8em .5em .4em .8em;
-    height:auto;/*height:1.8em;*/
-    font-size:1em;
-    margin:0;
-}
-.topNav {
-    background-image:url(resources/background.gif);
-    background-repeat:repeat-x;
-    color:#FFFFFF;
-    float:left;
-    padding:0;
-    width:100%;
-    clear:right;
-    height:2.8em;
-    padding-top:10px;
-    overflow:hidden;
-}
-.bottomNav {
-    margin-top:10px;
-    background-image:url(resources/background.gif);
-    background-repeat:repeat-x;
-    color:#FFFFFF;
-    float:left;
-    padding:0;
-    width:100%;
-    clear:right;
-    height:2.8em;
-    padding-top:10px;
-    overflow:hidden;
-}
-.subNav {
-    background-color:#dee3e9;
-    border-bottom:1px solid #9eadc0;
-    float:left;
-    width:100%;
-    overflow:hidden;
-}
-.subNav div {
-    clear:left;
-    float:left;
-    padding:0 0 5px 6px;
-}
+
 ul.navList, ul.subNavList {
     float:left;
     margin:0 25px 0 0;
@@ -172,21 +114,6 @@ ul.subNavList li{
     list-style:none;
     float:left;
     font-size:90%;
-}
-.topNav a:link, .topNav a:active, .topNav a:visited, .bottomNav a:link, .bottomNav a:active, .bottomNav a:visited {
-    color:#FFFFFF;
-    text-decoration:none;
-}
-.topNav a:hover, .bottomNav a:hover {
-    text-decoration:none;
-    color:#bb7a2a;
-}
-.navBarCell1Rev {
-    background-image:url(resources/tab.gif);
-    background-color:#a88834;
-    color:#FFFFFF;
-    margin: auto 5px;
-    border:1px solid #c9aa44;
 }
 /*
 Page header and footer styles

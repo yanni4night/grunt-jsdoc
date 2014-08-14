@@ -32,7 +32,8 @@ module.exports = function(grunt) {
     jsdoc: {
       default_options: {
         options: {
-          destDir: 'test/doc'
+          destDir: 'test/doc',
+          title:'Demo Docs'
         },
         src: ['test/source/*.js']
       }

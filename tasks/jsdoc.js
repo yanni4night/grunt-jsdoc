@@ -21,7 +21,8 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('jsdoc', 'Grunt plugin for generating doc from javascript source files', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      destDir: '.'
+      destDir: '.',
+      title: ''
     });
 
     if (!require('fs').statSync(options.destDir).isDirectory()) {
@@ -49,7 +50,7 @@ module.exports = function(grunt) {
 
       var docs = jsdoc(contents);
       var functionsKey = 'functions';
-      
+
       if (docs.classes[functionsKey]) {
         functionsKey += (Math.random() * 1e6) | 0;
       }
@@ -70,7 +71,9 @@ module.exports = function(grunt) {
 
 
       grunt.file.write(path.join(options.destDir, 'index.html'), swig.renderFile(path.join(__dirname, '../', 'tpl/index.tpl'), {
-        list: keys
+        list: keys,
+        title: options.title,
+        functions: functionsKey
       }));
 
     }); //files foreach
