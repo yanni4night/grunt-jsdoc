@@ -12,6 +12,7 @@
 var jsdoc = require('yjsdoc');
 var swig = require('swig');
 var path = require('path');
+var fs = require('fs');
 
 module.exports = function(grunt) {
 
@@ -25,7 +26,10 @@ module.exports = function(grunt) {
       title: ''
     });
 
-    if (!require('fs').statSync(options.destDir).isDirectory()) {
+    if ('string' !== typeof options.destDir || !options.destDir instanceof String) {
+      throw new Error('destDir has to be a string');
+    }
+    if (fs.existsSync(options.destDir) && !fs.statSync(options.destDir).isDirectory()) {
       throw new Error('destDir has to a directory');
     }
 
