@@ -1,7 +1,7 @@
 {
   "name": "grunt-yjsdoc",
   "description": "Grunt plugin for generating doc from javascript source files",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/yanni4night/grunt-jsdoc",
   "author": {
     "name": "yinyong",
