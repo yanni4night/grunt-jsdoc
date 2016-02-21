@@ -35,10 +35,11 @@
     "grunt-contrib-watch": "^0.6.1"
   },
   "peerDependencies": {
-    "grunt": "~0.4.4"
+    "grunt": ">=0.4.0"
   },
   "keywords": [
-    "gruntplugin","jsdoc"
+    "gruntplugin",
+    "jsdoc"
   ],
   "dependencies": {
     "swig": "~1.4.2",
